@@ -8,7 +8,8 @@ export function addRestaurant(restaurant) {
 
 // Reducer
 const initialState = {
-  restaurants: [],
+  formData: {name: '', location:''},
+  restaurants: []
 };
 
 export default function restaurantsReducer(state = initialState, action) {
@@ -18,7 +19,6 @@ export default function restaurantsReducer(state = initialState, action) {
         ...state,
         restaurants: [...state.restaurants, action.payload],
       };
-
     default:
       return state;
   }
